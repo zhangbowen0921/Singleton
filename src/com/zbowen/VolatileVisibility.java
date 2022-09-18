@@ -7,9 +7,9 @@ package com.zbowen;
  */
 public class VolatileVisibility extends Thread {
 
-     boolean flag = true;
+     private boolean flag = true;
 
-     volatile int count;
+     private volatile int count;
 
     @Override
     public void run() {

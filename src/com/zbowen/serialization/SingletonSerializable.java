@@ -42,11 +42,11 @@ public class SingletonSerializable implements Serializable {
         SingletonSerializable instance = SingletonSerializable.getInstance();
         instance.name = "张三";
         //对 单例对象进行 序列化
-        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("E:\\Users\\zbowen\\Desktop\\aa.txt"));
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("/Users/zhangbowen/aa.txt"));
         oos.writeObject(instance);
 
         //反序列化
-        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("E:\\Users\\zbowen\\Desktop\\aa.txt"));
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("/Users/zhangbowen/aa.txt"));
         SingletonSerializable obj = (SingletonSerializable) ois.readObject();
 
         System.out.println("instance：" + instance);

@@ -31,7 +31,7 @@ public class SerializableDetail implements Serializable{
         SerializableDetail instance = SerializableDetail.getInstance();
         instance.name = "hello";
 
-        FileOutputStream fos = new FileOutputStream("E:\\Users\\zbowen\\Desktop\\aa.txt");
+        FileOutputStream fos = new FileOutputStream("/Users/zhangbowen/aa.txt");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         oos.writeObject(instance);
         oos.close();

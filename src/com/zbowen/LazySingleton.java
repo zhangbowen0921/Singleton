@@ -10,7 +10,9 @@ public class LazySingleton {
     private static LazySingleton instance;
 
     //私有 构造 方法
-    private LazySingleton(){}
+    private LazySingleton() {
+        System.out.println(this.getClass().getName() + "构造方法执行了");
+    }
 
     //使用同步方法 加锁
     public static synchronized LazySingleton getInstance(){

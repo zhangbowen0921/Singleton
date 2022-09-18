@@ -18,12 +18,12 @@ public enum EnumSingleton implements Serializable {
 
     public static void main(String[] args) throws Exception {
         //枚举 对象 序列化
-//        EnumSingleton instance = EnumSingleton.INSTANCE;
-//        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("E:\\Users\\zbowen\\Desktop\\aa.txt"));
-//        oos.writeObject(instance);
+        EnumSingleton instance = EnumSingleton.INSTANCE;
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("/Users/zhangbowen/aa.txt"));
+        oos.writeObject(instance);
 
         //枚举 对象 的反序列化
-        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("E:\\Users\\zbowen\\Desktop\\aa.txt"));
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("/Users/zhangbowen/aa.txt"));
         EnumSingleton obj = (EnumSingleton) ois.readObject();
         ois.close();
         System.out.println(EnumSingleton.INSTANCE == obj);

@@ -8,8 +8,9 @@ package com.zbowen;
 public class LazySingleton4 {
 
     //私有构造
-    private LazySingleton4(){}
+    public LazySingleton4() { }
 
+    //使用内部类的静态变量来实现单例模式
     private static class LazyHolder {
         private static final LazySingleton4 INSTANCE = new LazySingleton4();
     }
@@ -18,4 +19,9 @@ public class LazySingleton4 {
     public static LazySingleton4 getInstance(){
         return LazyHolder.INSTANCE;
     }
+
+    public static void start() {
+        System.out.println("start方法执行了");
+    }
 }
+

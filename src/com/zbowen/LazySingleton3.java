@@ -7,16 +7,16 @@ package com.zbowen;
  */
 public class LazySingleton3 {
 
-    private static LazySingleton3 instance;
+//    private static LazySingleton3 instance;
 
-    //添加 volatile进制 instance对象创建时的指令重排 从而保证程序的正确性
-    //private static volatile LazySingleton3 instance;
+    //添加 volatile禁止 instance对象创建时的指令重排 从而保证程序的正确性
+    private static volatile LazySingleton3 instance;
 
     private LazySingleton3(){}
 
     public static LazySingleton3 getInstance(){
         if (instance == null) {
-            synchronized (LazySingleton2.class) {
+            synchronized (LazySingleton3.class) {
                 if (instance == null) {
                     instance = new LazySingleton3();
                 }
@@ -25,3 +25,5 @@ public class LazySingleton3 {
         return instance;
     }
 }
+
+

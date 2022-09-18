@@ -12,7 +12,7 @@ public class LazySingleton3 {
     //添加 volatile禁止 instance对象创建时的指令重排 从而保证程序的正确性
     private static volatile LazySingleton3 instance;
 
-    private LazySingleton3(){}
+    private LazySingleton3() { }
 
     public static LazySingleton3 getInstance(){
         if (instance == null) {

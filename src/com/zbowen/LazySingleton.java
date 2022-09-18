@@ -15,8 +15,8 @@ public class LazySingleton {
     }
 
     //使用同步方法 加锁
-    public static synchronized LazySingleton getInstance(){
-        if (instance != null) {
+    public static synchronized LazySingleton getInstance() {
+        if (instance == null) {
             instance = new LazySingleton();
         }
         return instance;

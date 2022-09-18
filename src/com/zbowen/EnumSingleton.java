@@ -27,6 +27,5 @@ public enum EnumSingleton implements Serializable {
         EnumSingleton obj = (EnumSingleton) ois.readObject();
         ois.close();
         System.out.println(EnumSingleton.INSTANCE == obj);
-
     }
 }
